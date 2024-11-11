@@ -1,0 +1,102 @@
+.navBar-container{
+    height: 5rem;
+    min-height: 5rem;
+    border: none;
+    border-bottom: 1px rgb(214, 213, 213) solid;
+    padding: 0 10%;
+}
+
+.navBar-wrapper{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    list-style: none;
+    height: 100%;
+    width: 100%;
+
+}
+.navBar-wrapper li:nth-child(4){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.navBar-wrapper li:nth-child(4) button{
+    background-color: transparent;
+    border: none;
+}
+
+.navBar-wrapper li:nth-child(4) button a{
+    background-color: transparent;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.navBar-wrapper li:nth-child(4) button a:hover{
+    color: coral;
+}   
+
+.Logo{
+    width: 130px;
+}
+
+.navBar-wrapper li{
+    position: relative; 
+}
+
+.navBar-wrapper li:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+
+.navBar-wrapper li svg{
+    height: 1.5rem;
+}
+
+.navBar-wrapper li:nth-child(2) div{
+
+    background-color: transparent;
+    border: transparent;
+    width: 17rem;
+    max-width: 17rem;
+    text-wrap: nowrap;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: rgb(151, 151, 151);
+
+}
+
+.navBar-wrapper li:nth-child(2){
+    cursor: pointer;
+}
+
+.navBar-wrapper li:nth-child(3) input{
+    background-color: rgb(236, 236, 236);
+    border: transparent;
+    height: 3.5rem;
+    width: 30rem;
+    border-radius: 10px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+.navBar-wrapper input::placeholder{
+    color: rgb(151, 151, 151);
+}
+.navBar-wrapper input~i{
+    position: absolute;
+    top: 35%;
+    right: 2%;
+    color: rgb(151, 151, 151);
+}
+
+.Profile-Pic{
+    width: 4rem;
+    border-radius: 50px;
+}

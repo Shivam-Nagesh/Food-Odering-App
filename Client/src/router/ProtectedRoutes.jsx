@@ -12,7 +12,7 @@ const ProtectedRoutes = () => {
             navigate('/',{replace: true});
             return;
         }
-    },[navigate])
+    },[navigate, auth.user])
 
     return <Outlet />
 }

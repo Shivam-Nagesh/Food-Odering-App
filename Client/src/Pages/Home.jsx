@@ -6,6 +6,8 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Loading from '../Components/Loading';
 import ErrorPage from './ErrorPage';
+import TempButton from '../Temp/TempButton';
+
 
 // So first idea was to store city in auth state and then in backend if auth.coords => params.cords === undefined then find it by city (i.e no [lon,lat] and searchRadius);
 
@@ -62,7 +64,8 @@ const Home = () => {
 
   return (
     <>
-    <div>Home</div>
+    <h1>Home</h1>
+    <TempButton />
     </>
   )
 }

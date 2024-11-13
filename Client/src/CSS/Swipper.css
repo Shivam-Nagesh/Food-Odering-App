@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+.SwipperContainer{
+    position: relative;
+    width: 80%;
+    height: 270px;
+    font-family: 'Roboto Condensed';
+    letter-spacing: 0.5px;
+    border-bottom: 1px rgba(184, 182, 182, 0.664) solid;
+}
+.swiper{
+    height: 100%; 
+    /* background-color: burlywood  */
+}
+.swiper-wrapper{
+    height: 75%;
+} 
+.swiper-slide {
+    display: flex;
+}
+
+.swiper-slide img{
+    width: 100%;
+}
+
+.swiper-prev-button{
+    right: 3rem;
+    top: 0.5rem;
+}
+.swiper-next-button{
+    right: 0.5rem;
+    top: 0.5rem;
+}
+.swiper-button{
+    font-family: 'Roboto Condensed';
+    font-size: 1rem;
+    font-weight: 900;
+    height: 2rem;
+    padding: 0.5rem 0.8rem; 
+    border-radius: 50px;
+    border-style: none;
+    background-color: rgb(235, 230, 230);
+    transition: transform 0.2s ease;
+}
+.swiper-button:active{
+    transform: scale(1.2);
+}
+
+.swiper-pagination-bullet-active{
+    background-color: yellow;
+}
+
+.swiper-container-start{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 900;
+    font-size: larger;
+    padding: 0 1rem;
+    
+}

@@ -6,7 +6,9 @@ import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import Loading from '../Components/Loading';
 import ErrorPage from './ErrorPage';
-import TempButton from '../Temp/TempButton';
+// import TempButton from '../Temp/TempButton';
+import Carousel from '../Components/HomeSwiperCarousal';
+import '../CSS/Home.css';
 
 
 // So first idea was to store city in auth state and then in backend if auth.coords => params.cords === undefined then find it by city (i.e no [lon,lat] and searchRadius);
@@ -24,8 +26,9 @@ const Home = () => {
       try {
         const res = await axios(`https://api.geoapify.com/v1/ipinfo?&apiKey=${process.env.REACT_APP_GEOAPIFY_API_KEY}`);
         const coords = res.data.location;
+        const city = res.data.city.name;
         const precise = false;
-        return { ...coords, precise };
+        return { ...coords, city, precise };
       }
       catch (e) {
         return null;
@@ -63,10 +66,10 @@ const Home = () => {
   if(error) return <ErrorPage status={503} message={'Server Down'}/>
 
   return (
-    <>
-    <h1>Home</h1>
-    <TempButton />
-    </>
+    <section className='homeSection'>
+    <Carousel />
+    {/* <TempButton /> */}
+    </section>
   )
 }
 
